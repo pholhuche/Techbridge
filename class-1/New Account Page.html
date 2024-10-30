@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <style>
+        .body{
+            height: 100vh;
+            background-color: aliceblue;
+        }
+        .body>div{
+            width: 450px;
+            height: 600px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 4px grey;
+            margin: auto auto;
+            position: relative;
+            top: 40px;
+            text-align: center;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        h2{
+            font-size: 20px;
+        }
+        h2+p{
+            font-size: 14px;
+            margin-bottom: 16px;
+            position: relative;
+
+        }
+
+        .name{
+            padding: 16px 0; 
+            text-align: left;
+
+        }
+        .name>input{
+            width: 45%;
+           
+        }
+        input[placeholder="First name"]{
+            margin-right: 2.5%
+        }
+        .input{
+            border: 1px solid grey;
+            border-radius: 4px;
+            padding: 8px;
+            height: 35px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        ::placeholder{
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 600;
+        }
+
+        .carl{
+            text-align: left;
+        }
+        .dob>p{
+            text-align: left;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 4px;
+        }
+
+        p>span{
+            width: 24px;
+            height: 14px;
+            color: white;
+            display: inline-block;
+            border-radius: 50%;
+            padding: 4px;
+            font-size: 8px;
+            text-align: center;
+            background-color: black;
+        }
+
+        .carl>.input{
+            width:32%;
+            height: 30px;
+        }
+
+        .gender div{
+            display: inline-block;
+            width:80%;
+            padding: 4px 8px !important;
+        }
+
+        .gender carl{
+            width: 100%;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+            padding: 0% !important;
+        }
+
+        input[type="radio"]{
+       
+        }
+
+
+    </style>
+<title>New Account Page</title>
+
+</head>
+<body >
+      <div class="body">
+            <div class="form_container">
+                <div>
+                    <h2>Create New Account</h2>
+                    <p>It's quick and easy.</p>
+                    <hr><br>
+                </div>
+                <div>
+                 <form action="">
+                        <input class="input" type="text" placeholder="Firstname">
+                        <input class="input" type="text" placeholder="Surname">
+                </div><br>
+
+                <div>
+                    <form action="">
+                        <label class="dob">Date of birth</label><br>
+                        <select class="day" name="day">
+                            <option value="21">21</option>
+                        </select>
+    
+                        <select id="month" name="month">
+                            <option value="Oct">Oct</option>
+                        </select>
+    
+                        <select id="year" name="year">
+                            <option value="2024">2024</option>
+                        </select>
+                </div>
+
+                <div class="gender">
+                    <p>Gender <span>?</span></p>
+                    <div class="carl">
+                        <div class="input" name="" id="">
+                            <label for="">Female</label>
+                            <input type="radio" name="gender" id="">
+                        </div>
+                        <div class="input" name="" id="">
+                            <label for="">Male</label>
+                            <input type="radio" name="gender" id="">
+                        </div>
+                        <div class="input" name="" id="">
+                            <label for="">Custom</label>
+                            <input type="radio" name="gender" id="">
+                        </div>
+
+                    </div>
+                </div>
+
+                </form>
+            </div>
+      </div>  
+    
+    
+    
+    
+    
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

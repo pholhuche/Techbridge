@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .flex-container{
+        background-color: whitesmoke;
+    display: flex;
+    flex-direction: column; 
+    }
+
+    .flex-container>div{
+       align-items: center; 
+    }
+</style>
+
+    <title>Create New Account</title>
+</head>
+<body>
+
+
+    <!--<center>-->
+    <div class="flex-container"> 
+       <div><h2>Create a new account</h2>
+        <p>It's quick and easy.</p></div>
+
+                <div><form action="#" method="POST">
+            <!-- Left-align all elements inside the form -->
+
+                <!-- Row 1: First Name and Surname -->
+                <div>
+                    <input type="text" id="firstname" placeholder="First name" name="firstname" required>
+                    <input type="text" id="surname" name="surname" placeholder="Surname" required>
+                </div>
+                <br>
+
+                <!-- Row 2: Date of Birth -->
+                    <div  >
+                        <label for="dob">Date of birth</label><br>
+                        <select id="day" name="day">
+                            <option value="21">21</option>
+                            <!-- Add more day options as needed -->
+                        </select>
+
+                        <select id="month" name="month">
+                            <option value="Oct">Oct</option>
+                            <!-- Add more month options as needed -->
+                        </select>
+
+                        <select id="year" name="year">
+                            <option value="2024">2024</option>
+                            <!-- Add more year options as needed -->
+                        </select>
+                     </div>
+                <br>
+
+                <!-- Row 3: Gender Radio Buttons -->
+                    <div>
+                        <label>Gender</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="custom" name="gender" value="custom">
+                        <label for="custom">Custom</label>
+                     </div>
+                <br>
+
+                <!-- Row 4: Mobile Number or Email Address -->
+                <div>
+                    <input type="text" id="mobile_email" placeholder="Mobile number or email address" name="mobile_email" required>
+                </div>
+                <br>
+
+                <!-- Row 5: New Password -->
+                <div>
+                    <input type="password" id="password" placeholder="New password" name="password" required>
+                </div>
+                <br>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit">Sign Up</button>
+                </div>
+           
+        </form>
+
+        <p>People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more.</a></p>
+
+        <p>By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a>, and <a href="#">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+
+        <p>Already have an account? <a href="#">Log in</a></p>
+
+    </div>
+   <!-- </center>-->
+
+</body>
+</html>

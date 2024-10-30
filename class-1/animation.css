@@ -1,0 +1,51 @@
+
+/*.flex-container{
+    background-color: rgb(167, 228, 11);
+    border: 10px black;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    text-align: center;
+}*/
+
+.boxx{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    text-decoration: dotted;
+    font-weight: 700;
+    
+     /*translate: 100px 100px;
+    transition-duration: 2s;
+   transform: rotate(30deg) translate(200px,400px);
+    transition: all 2s 2s ease-in;
+    transition-timing-function: ;
+    animation-iteration-count: infinite;*/
+
+}
+h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+@keyframes example{
+    0%{transform: scale(0.4);
+    }
+    50%{background-color: aquamarine;
+    }
+    100%{transform: scale(2);
+    }
+}
+
+@media screen and (max-width:700px){
+    
+}
+.boxx:hover{
+    background-color: white;
+    box-shadow: 0 0 10px gray;
+    transition-duration: 1s;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>New Account Page</title>
+<style>
+ body {background-color: rgb(248, 244, 244);}
+div{width: 300px;
+    margin: auto;
+    background-color: #ffffff;}
+    
+</style>
+</head>
+
+<body>
+
+<div>
+    <center> <h2>Create a new account</h2>
+        It's quick and easy. <br><br><br></center>
+
+        <center><form>
+            <div><input type="text" name="first_name" placeholder="First name" required><br><br>
+            <input type="text" name="surname" placeholder="Surname" required>
+        </div><br>
+    
+            <div>
+                <label for="dob">Date of birth ❓</label><br>
+            <select id="Day" name="Day">
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+            </select>
+       
+
+        <select name="month" required>
+            <option value="Oct" selected>Oct</option>
+           
+        </select>
+
+        <select name="year" required>
+            <option value="2024" selected>2024</option>
+            
+        </select>
+    </div>
+    <label>Gender</label>
+    <div>
+        <input type="radio" name="gender" value="Female" id="female" required>
+        <label class="gender-label" for="female">Female</label>
+
+        <input type="radio" name="gender" value="Male" id="male">
+        <label class="gender-label" for="male">Male</label>
+
+        <input type="radio" name="gender" value="Custom" id="custom">
+        <label for="custom">Custom</label>
+    </div><br>
+
+    <input type="text" name="contact" placeholder="Mobile number or email address" required><br><br>
+    <input type="password" name="password" placeholder="New password" required>
+
+    <button type="submit">Sign Up</button>
+</form></center><br>
+<p>People who use our service may have uploaded your contact information to facebook. Learn more</p>
+
+<a href="/login">Already have an account?</a>
+</div>
+
+</body>
+</html>
+              

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .flex-container{
+        background-color: rgb(228, 228, 236);
+        display: flex;
+        flex-direction: row;
+    /*width: 50;*/
+        /*flex-wrap: wrap-reverse;*/
+        /*overflow: scroll;*/
+        justify-content: space-evenly;
+        align-items: center;
+        
+        }
+
+        .aside>.containerB{
+            
+            width: 300px;
+            height: 280px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 4px grey;
+            margin: auto;
+            position: relative;
+            top: 40px;
+            text-align: center;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .input{
+            border: 1px solid grey;
+            border-radius: 4px;
+            padding: 8px;
+            height: 35px;
+            width: 260px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        ::placeholder{
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 600;
+        }
+
+        .button1{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            width: 260px;
+            border-radius: 4px;
+        }
+
+        p{
+            color: black(83, 83, 207);
+        }
+
+        .button2{
+            background-color: rgb(43, 136, 74);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            width: 150px;
+            border-radius: 4px;
+        }
+
+
+    </style>
+<title>
+    Facebook login
+</title>
+</head>
+<body class="flex-container">
+    <!--<div class="boxx">-->
+            <div class="containerA">
+                <p><h1 style="color:blue;">facebook</h1></p>
+                <p>Facebook helps you connect and share with the people in your life.</p>   
+            </div>
+
+            <div class="aside">
+                    <div class="containerB">
+                            
+                                    <input class="input" type="text" placeholder="Email address or phone number"><br><br>
+                                    <input class="input" type="text" placeholder="Password"><br><br>
+                                    <button class="button1">Log in</button>
+                                    <p>Forgotten password?</p>
+                                    <hr>
+                                    <button class="button2">Create new account</button>
+                     </div>   <br><br>    
+                    <p><b>Create a Page </b> for a celebrity, brand or business.</p>
+                  
+    </div>       
+
+</body>
+</html>
