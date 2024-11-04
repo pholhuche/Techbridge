@@ -1,0 +1,85 @@
+.fullbody{
+    background-color: rgb(249, 250, 252);
+}
+
+.flex-container{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    gap: 18px;
+}
+
+.flex-container>div{
+   align-self: center;
+   margin-right: 20px;
+}
+
+.flex-containerA{
+    display: flex;
+    background-color: rgb(240, 8, 240);
+    flex-direction: row;
+  justify-content: space-around;
+    height: 70px;
+    /* gap: 18px; */
+}
+
+
+
+
+
+
+
+
+
+
+/* .container {
+    width: 100%;
+    margin: 0 auto;
+} */
+
+/* header {
+    background-color: #3a1e9e;
+    padding: 2px 0px;
+} */
+/* 
+.container{
+    background-color: white;
+}
+
+header ul {
+    list-style: none;
+    float: right;
+ 
+}
+
+header ul li {
+    display: inline;
+    margin-left: 20px;
+   
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold; */
+
+
+/* .flex-container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+
+} */
+ /* .topnav{
+    overflow: hidden;
+    background-color: white;
+    
+}
+.topnav a{
+    display: inline-block;
+    align-items: center;
+    padding: 8px 20px;
+}    */
+    
