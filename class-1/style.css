@@ -42,3 +42,18 @@ position: relative;
     font-size: 32px;
     text-align: center;
 }
+
+.grid-container{
+    display: grid;
+    gap: 100px 100px;
+    background-color: aquamarine;
+}
+
+.grid-item>div{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+}

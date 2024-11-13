@@ -3,12 +3,22 @@
 <head>
     <style>
         .body{
-            height: 100vh;
+            height: 130vh;
             background-color: aliceblue;
+            width: ;
         }
+        /* .formholder{
+            background-color: #fff;
+            border-radius: 0 0 8px 8px;
+            border-top: 1px solid #dadde1;
+            box-sizing: border-box;
+            padding: 16px;
+            position: relative;
+            width: 432px;
+        } */
         .body>div{
             width: 450px;
-            height: 600px;
+            height: 620px;
             border-radius: 10px;
             background-color: white;
             box-shadow: 0 0 4px grey;
@@ -97,8 +107,49 @@
             padding: 0% !important;
         }
 
-        input[type="radio"]{
-       
+        .input2{
+            border: 1px solid grey;
+            border-radius: 4px;
+            padding: 8px;
+            height: 35px;
+            width: 380px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .contA>div{
+            font-size: small;
+        }
+
+        .allinput>p{
+            font-size: 12px;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .lastp>p{
+            color: blue;
+            text-align: center;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        
+        .button{
+            background-color: rgb(6, 185, 6);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            width: 190px;
+            border-radius: 8px;
+        }
+        select {
+            border-style: solid;
+            width: 32%;
+            height: 30px;
+            /* border-width: 3px; */
         }
 
 
@@ -114,7 +165,8 @@
                     <p>It's quick and easy.</p>
                     <hr><br>
                 </div>
-                <div>
+
+                <div class="formholder">
                  <form action="">
                         <input class="input" type="text" placeholder="Firstname">
                         <input class="input" type="text" placeholder="Surname">
@@ -153,6 +205,18 @@
                         </div>
 
                     </div>
+                </div>
+
+                <div class="allinput">
+                    <input class="input2" type="text" placeholder="Mobile number or email address"><br><br>
+                    <input class="input2" type="text" placeholder="New password"><br>
+                    <P>People who use our service may have uploaded your contact information to Facebook. Learn more.</P>
+                    <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p><br>
+                    <button class="button">Sign Up</button>
+                </div>
+
+                <div class="lastp"> 
+                    <p>Already have an account?</p>
                 </div>
 
                 </form>
