@@ -1,5 +1,6 @@
 .fullbody{
     background-color: rgb(249, 250, 252);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .flex-container{
@@ -18,19 +19,180 @@
 
 .flex-containerA{
     display: flex;
-    background-color: rgb(240, 8, 240);
+    background-color: rgb(237, 1, 127);
     flex-direction: row;
   justify-content: space-around;
-    height: 70px;
+    height: 60px;
     /* gap: 18px; */
 }
 
+.flex-containerA>div{
+    display:inline-flex;
+    /* width: 100px; */
+    padding: 0px;
+    margin: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.input{
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 20px;
+    height: 20px;
+    width: 550px;
+    box-sizing: border-box;
+    outline: none;
+    margin: 10px;
+}
+
+::placeholder{
+    font-size: 12px;
+    color: white);
+    font-weight: 200;
+}
+
+.flex-containerA>button{
+    background-color: rgb(51, 178, 123);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    /* display: inline-block; */
+    font-size: 12px;
+    font-weight: 250;
+    width: 130px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.flex-containerB{
+    display: flex;
+    background-color: rgb(160, 3, 87);
+    flex-direction: row;
+  justify-content: space-around;
+    height: 40px;
+}
 
 
+.flex-containerB>div{
+    display:inline-flex;
+    padding: 0px;
+    margin: 10px;
+    color: white;
+    font-size: 14px;
+}
 
+.flex-containerD{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 10px;
+    padding: 15px; 
+}
 
+.flex-containerC{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    gap: 5px;
+    height: 10px;
+    padding: 5px;
+}
+   
+.home{
+    color: rgb(7, 7, 88);
+    font-size: small;
+}
 
+.amaze{
+    color: rgb(7, 7, 88);
+    font-size: 40px;
+    text-transform: capitalize;
+   
+}
 
+.forwardA{
+    color: rgb(177, 171, 171);
+   
+}
+
+.dallies{
+    color: rgb(160, 3, 87) ;
+    font-size: small;
+}
+
+.hero{
+    margin: 15px;
+}
+
+.productGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding-top: 30px;
+   margin: 15px;
+}
+
+.productCard{
+    background-color: white;
+    padding: 10px;
+    border-radius: px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 230px;
+}
+
+.flex-containerE{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.discount{
+    font-size: 10px;
+    height: 10px;
+    width: 30px;
+    border-radius: 5px;
+    background-color:pink ;
+    color: rgb(237, 1, 127);
+    padding: 5px;
+}
+
+.cancelled{
+    color: rgb(138, 136, 136);
+    font-size: 14px;
+}
+
+.productCard>img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+p{
+  font-size: 14px 
+}
+
+.flex-containerF{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+/* 
+.colorBar{
+    background-color: green;
+} */
+
+button{
+    background-color: white;
+    border-radius: 4px;
+    border-color: rgb(237, 1, 127);
+    color: rgb(237, 1, 127);
+    width: 230px;
+    padding: 10px;
+    font-weight: 600;
+}
 
 
 
