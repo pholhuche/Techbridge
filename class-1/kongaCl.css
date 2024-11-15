@@ -178,11 +178,22 @@ p{
     display: flex;
     flex-direction: row;
     padding-bottom: 10px;
+    justify-content: space-between;
 }
-/* 
+
+.bar{
+    background-color: rgb(218, 217, 217);
+    height: 10px;
+    width: 80px;
+    border-radius: 25px; 
+}
+
 .colorBar{
     background-color: green;
-} */
+    height: 10px;
+    width: 70px;
+    border-radius: 25px;
+}
 
 button{
     background-color: white;
