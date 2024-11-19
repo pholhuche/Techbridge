@@ -1,57 +1,110 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First JS Class</title>
+    <title>Paper, Rock, Scissors Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .choices {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .winner {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007b00;
+        }
+    </style>
 </head>
 <body>
+    <h1>Paper, Rock, Scissors</h1>
+    <p>First to score 3 points wins the game!</p>
+
+    <div class="choices">
+        <button onclick="playGame('rock')">Rock</button>
+        <button onclick="playGame('paper')">Paper</button>
+        <button onclick="playGame('scissors')">Scissors</button>
+    </div>
+
+    <div class="results">
+        <p id="user-choice">Your choice: </p>
+        <p id="computer-choice">Computer's choice: </p>
+        <p id="round-result">Round result: </p>
+        <p id="score"><b>Score: </b>You - 0, Computer - 0</p>
+    </div>
+
+    <div class="winner" id="winner"></div>
+
     <script>
-// Function to play Rock, Paper, Scissors
-function playGame(userChoice) {
-  // Convert user input to lowercase for easy comparison
-  userChoice = userChoice.toLowerCase();
+        let userScore = 0;
+        let computerScore = 0;
 
-  // Generate computer's choice
-  const choices = ["rock", "paper", "scissors"];
-  const computerChoice = choices[Math.floor(Math.random() * 3)];
-  
-  console.log(`User choice: ${userChoice}`);
-  console.log(`Computer choice: ${computerChoice}`);
+        function getComputerChoice() {
+            const choices = ['rock', 'paper', 'scissors'];
+            return choices[Math.floor(Math.random() * choices.length)];
+        }
 
-  // Determine the winner
-  if (userChoice === computerChoice) {
-    console.log("It's a tie!");
-  } else if (userChoice === "rock") {
-    if (computerChoice === "scissors") {
-      console.log("You win! Rock beats Scissors.");
-    } else {
-      console.log("You lose! Paper beats Rock.");
-    }
-  } else if (userChoice === "paper") {
-    if (computerChoice === "rock") {
-      console.log("You win! Paper beats Rock.");
-    } else {
-      console.log("You lose! Scissors beats Paper.");
-    }
-  } else if (userChoice === "scissors") {
-    if (computerChoice === "paper") {
-      console.log("You win! Scissors beats Paper.");
-    } else {
-      console.log("You lose! Rock beats Scissors.");
-    }
-  } else {
-    console.log("Invalid choice. Please select Rock, Paper, or Scissors.");
-  }
-}
+        function determineWinner(userChoice, computerChoice) {
+            if (userChoice === computerChoice) return "draw";
+            if (
+                (userChoice === "rock" && computerChoice === "scissors") ||
+                (userChoice === "paper" && computerChoice === "rock") ||
+                (userChoice === "scissors" && computerChoice === "paper")
+            ) {
+                return "user";
+            }
+            return "computer";
+        }
 
-// Example usage
-playGame("rock"); // You can replace "rock" with "paper" or "scissors"
+        function playGame(userChoice) {
+            const computerChoice = getComputerChoice();
+            const roundWinner = determineWinner(userChoice, computerChoice);
 
+            document.getElementById("user-choice").textContent = `Your choice: ${userChoice}`;
+            document.getElementById("computer-choice").textContent = `Computer's choice: ${computerChoice}`;
 
+            if (roundWinner === "user") {
+                userScore++;
+                document.getElementById("round-result").textContent = "You win this round!";
+            } else if (roundWinner === "computer") {
+                computerScore++;
+                document.getElementById("round-result").textContent = "Computer wins this round!";
+            } else {
+                document.getElementById("round-result").textContent = "It's a draw!";
+            }
 
+            document.getElementById("score").textContent = `Score: You - ${userScore}, Computer - ${computerScore}`;
 
+            if (userScore === 3 || computerScore === 3) {
+                const winner = userScore === 3 ? "You are the winner!" : "The computer wins!";
+                document.getElementById("winner").textContent = winner;
+                disableButtons();
+            }
+        }
 
-</script>
+        function disableButtons() {
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach(button => button.disabled = true);
+        }
+    </script>
 </body>
 </html>

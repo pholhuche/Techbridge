@@ -8,25 +8,43 @@
     <!-- <link rel="stylesheet" href="style1.css"> -->
 </head>
 <body>
-  
+<!--   
     <h1>H1</h1>
     <div class="red" >
+        <p></p>
+    </div> -->
+
+    <div class="red" id="id">
+        <h1>This is the header</h1>
+    </div>
+    <div>
         <p></p>
     </div>
 
     <script>
-        let element=document.getElementByclassName()
 
-        if(element.className=="red"){
-            let newElement = document.createElement("p")
-            newElement.textContent = "hello Valentine";
-            element.appendChild(newElement);
-        }
-        else{
-            let newElement = document.createElement("M")
-            newElement.textContent = "this si valentine day";
-            element.appendChild(newElement);
-        }
+        
+                element =document.getElememtById("id")
+                    if(element.className="red"){
+                        let firstDiv=document.getElementsByTagName("div")
+                    let newElement=document.createElememt("p")
+                    newElement.textContent= "Hello Seun";
+                    element.appendChild(newElement);
+                    console.log(newElement);
+                    }
+
+        // let element=document.getElementByclassName()
+
+        // if(element.className=="red"){
+        //     let newElement = document.createElement("p")
+        //     newElement.textContent = "hello Valentine";
+        //     element.appendChild(newElement);
+        // }
+        // else{
+        //     let newElement = document.createElement("M")
+        //     newElement.textContent = "this is valentine day";
+        //     element.appendChild(newElement);
+        // }
     </script>
 </body>
 </html>
