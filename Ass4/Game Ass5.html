@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper, Rock, Scissors Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .choices {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .winner {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007b00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Paper, Rock, Scissors</h1>
+    <p>First to score 3 points wins the game!</p>
+
+    <div class="choices">
+        <button onclick="playGame('rock')">Rock</button>
+        <button onclick="playGame('paper')">Paper</button>
+        <button onclick="playGame('scissors')">Scissors</button>
+    </div>
+
+    <div class="results">
+        <p id="user-choice">Your choice: </p>
+        <p id="computer-choice">Computer's choice: </p>
+        <p id="round-result">Round result: </p>
+        <p id="score"><b>Score: </b>You - 0, Computer - 0</p>
+    </div>
+
+    <div class="winner" id="winner"></div>
+
+    <script>
+        let userScore = 0;
+        let computerScore = 0;
+
+        function getComputerChoice() {
+            const choices = ['rock', 'paper', 'scissors'];
+            return choices[Math.floor(Math.random() * choices.length)];
+        }
+
+        function determineWinner(userChoice, computerChoice) {
+            if (userChoice === computerChoice) return "draw";
+            if (
+                (userChoice === "rock" && computerChoice === "scissors") ||
+                (userChoice === "paper" && computerChoice === "rock") ||
+                (userChoice === "scissors" && computerChoice === "paper")
+            ) {
+                return "user";
+            }
+            return "computer";
+        }
+
+        function playGame(userChoice) {
+            const computerChoice = getComputerChoice();
+            const roundWinner = determineWinner(userChoice, computerChoice);
+
+            document.getElementById("user-choice").textContent = `Your choice: ${userChoice}`;
+            document.getElementById("computer-choice").textContent = `Computer's choice: ${computerChoice}`;
+
+            if (roundWinner === "user") {
+                userScore++;
+                document.getElementById("round-result").textContent = "You win this round!";
+            } else if (roundWinner === "computer") {
+                computerScore++;
+                document.getElementById("round-result").textContent = "Computer wins this round!";
+            } else {
+                document.getElementById("round-result").textContent = "It's a draw!";
+            }
+
+            document.getElementById("score").textContent = `Score: You - ${userScore}, Computer - ${computerScore}`;
+
+            if (userScore === 3 || computerScore === 3) {
+                const winner = userScore === 3 ? "You are the winner!" : "The computer wins!";
+                document.getElementById("winner").textContent = winner;
+                disableButtons();
+            }
+        }
+
+        function disableButtons() {
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach(button => button.disabled = true);
+        }
+    </script>
+</body>
+</html>

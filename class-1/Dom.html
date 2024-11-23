@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+</head>
+<body>
+<!--   
+    <h1>H1</h1>
+    <div class="red" >
+        <p></p>
+    </div> -->
+
+    <div class="red" id="id">
+        <h1>This is the header</h1>
+    </div>
+    <div>
+        <p></p>
+    </div>
+
+    <script>
+
+        
+                element =document.getElememtById("id")
+                    if(element.className="red"){
+                        let firstDiv=document.getElementsByTagName("div")
+                    let newElement=document.createElememt("p")
+                    newElement.textContent= "Hello Seun";
+                    element.appendChild(newElement);
+                    console.log(newElement);
+                    }
+
+        // let element=document.getElementByclassName()
+
+        // if(element.className=="red"){
+        //     let newElement = document.createElement("p")
+        //     newElement.textContent = "hello Valentine";
+        //     element.appendChild(newElement);
+        // }
+        // else{
+        //     let newElement = document.createElement("M")
+        //     newElement.textContent = "this is valentine day";
+        //     element.appendChild(newElement);
+        // }
+    </script>
+</body>
+</html>
