@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS Class</title>
+</head>
+<body>
+    <script>
+
+        alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+                const reverse = (alpha)=>{
+            rIndex = 25 - alphabet.indexOf(alpha)
+            return alphabet[rIndex]
+        }
+        function reverseWord(word){
+            wordOutput=""
+            for (const element of word) {
+            if(alphabet.includes(element)){
+                wordOutput+=reverse(element)
+            } 
+            else wordOutput += element
+                
+            }
+            return wordOutput;
+        }
+        
+        console.log(reverseWord("how are you"))
+        console.log(reverseWord("sld ziv blf"));
+
+        // Input: "how are you"
+
+        // Step by step transformation:
+            // 'h' -> 's' (Reverse of 'h' is 's' in the alphabet).
+            // 'o' -> 'l' (Reverse of 'o' is 'l' in the alphabet).
+            // 'w' -> 'd' (Reverse of 'w' is 'd' in the alphabet).
+            // Spaces remain unchanged.
+            // 'a' -> 'z'.
+            // 'r' -> 'i'.
+            // 'e' -> 'v'.
+            // 'y' -> 'b'.
+            // 'o' -> 'l'.
+            // 'u' -> 'f'.
+        // Output: "sld ziv blf".
+
+    </script>
+</body>
+</html>
