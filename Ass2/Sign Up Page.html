@@ -2,56 +2,60 @@
 <html lang="eng">
 <head>
     <style>
-        .body{
-            height: 130vh;
-            background-color: aliceblue;
-            width: ;
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
         }
-        /* .formholder{
-            background-color: #fff;
-            border-radius: 0 0 8px 8px;
-            border-top: 1px solid #dadde1;
-            box-sizing: border-box;
-            padding: 16px;
-            position: relative;
-            width: 432px;
-        } */
+
+        .formholder{
+            display: block;
+            row-gap: 20px;
+        }
+        
         .body>div{
             width: 450px;
-            height: 620px;
+            height: 600px;
             border-radius: 10px;
             background-color: white;
             box-shadow: 0 0 4px grey;
             margin: auto auto;
             position: relative;
-            top: 40px;
             text-align: center;
             padding: 16px;
             box-sizing: border-box;
         }
 
+        h1{
+            font-size: 48px;
+            color: #1877f2;
+            margin: 20px;
+            text-align: center;
+        }
+
         h2{
             font-size: 20px;
+            color: black;
+            margin-bottom: 5px;
+            text-align: center;
         }
+
         h2+p{
+            color: #606770;
             font-size: 14px;
-            margin-bottom: 16px;
-            position: relative;
+            text-align: center;
+            margin: 5px 0;
 
         }
 
-        .name{
-            padding: 16px 0; 
-            text-align: left;
+        hr {
+            border: 0.5px solid #e0e0e0;
+        }
 
-        }
-        .name>input{
-            width: 45%;
-           
-        }
-        input[placeholder="First name"]{
-            margin-right: 2.5%
-        }
         .input{
             border: 1px solid grey;
             border-radius: 4px;
@@ -59,79 +63,113 @@
             height: 35px;
             box-sizing: border-box;
             outline: none;
+            border: 1px solid #dddfe2;
+            width: 49%;
+            margin-right: 1px;
+            
         }
 
         ::placeholder{
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0.5);
-            font-weight: 600;
+            font-size: 14px;
+            color: #606770;
+            font-weight: 300;
         }
 
         .carl{
             text-align: left;
         }
         .dob>p{
+            display: flex;
             text-align: left;
             font-size: 12px;
-            color: rgba(0, 0, 0, 0.8);
-            margin-bottom: 4px;
+            color: #606770;
+            margin-bottom: -19px;
+            margin-top: -3px;
+            flex-direction: row;
+            gap: 3px;
+        }
+
+        select {
+            height: 30%;
+            width: 135px;
+            padding: 10px;
+            margin-right: 1px;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender>p{
+            display: flex;
+            text-align: left;
+            font-size: 12px;
+            color: #606770;
+            margin-bottom: -5px;
+            margin-top: 15px;
+            gap: 3px;
         }
 
         p>span{
-            width: 24px;
-            height: 14px;
+            width: 8px;
+            height: -1px;
             color: white;
-            display: inline-block;
             border-radius: 50%;
             padding: 4px;
-            font-size: 8px;
+            font-size: 10px;
             text-align: center;
-            background-color: black;
+            background-color:  #606770;
+        }
+
+        .gender{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .carl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 35%;
+            width: 415px;
+            margin-bottom: 5px;
+            
         }
 
         .carl>.input{
-            width:32%;
-            height: 30px;
-        }
-
-        .gender div{
-            display: inline-block;
-            width:80%;
-            padding: 4px 8px !important;
-        }
-
-        .gender carl{
-            width: 100%;
-            font-size: 14px;
-            color: rgba(0, 0, 0, 0.5);
-            padding: 0% !important;
-        }
-
-        .input2{
-            border: 1px solid grey;
-            border-radius: 4px;
-            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             height: 35px;
-            width: 380px;
+            width: 130px;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
             box-sizing: border-box;
-            outline: none;
+            font-size: 14px;
         }
 
-        .contA>div{
-            font-size: small;
-        }
+         .input2{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+            box-sizing: border-box;
+         }
 
         .allinput>p{
+            color: #606770;
             font-size: 12px;
             text-align: left;
             font-family: inherit;
         }
 
-        .lastp>p{
+                .lastp>p{
             color: blue;
             text-align: center;
             font-size: 16px;
             font-family: inherit;
+            cursor: pointer;
         }
         
         .button{
@@ -144,13 +182,23 @@
             font-weight: 700;
             width: 190px;
             border-radius: 8px;
+            border: none;
         }
-        select {
-            border-style: solid;
-            width: 32%;
-            height: 30px;
-            /* border-width: 3px; */
+
+        .button:hover {
+            background-color: #36a420;
         }
+
+        .allinput b{
+            color: #1877f2;
+            cursor: pointer;
+            font-weight: 200;
+        }
+
+        .allinput b:hover {
+            text-decoration: underline;
+        }
+       
 
 
     </style>
@@ -159,9 +207,10 @@
 </head>
 <body >
       <div class="body">
+        <h1>facebook</h1>
             <div class="form_container">
                 <div>
-                    <h2>Create New Account</h2>
+                    <h2>Create a new account</h2>
                     <p>It's quick and easy.</p>
                     <hr><br>
                 </div>
@@ -174,7 +223,7 @@
 
                 <div>
                     <form action="">
-                        <label class="dob">Date of birth</label><br>
+                        <label class="dob"><p>Date of birth <span>?</span></p></label><br>
                         <select class="day" name="day">
                             <option value="21">21</option>
                         </select>
@@ -208,10 +257,10 @@
                 </div>
 
                 <div class="allinput">
-                    <input class="input2" type="text" placeholder="Mobile number or email address"><br><br>
+                    <input class="input2" type="text" placeholder="Mobile number or email address">
                     <input class="input2" type="text" placeholder="New password"><br>
-                    <P>People who use our service may have uploaded your contact information to Facebook. Learn more.</P>
-                    <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p><br>
+                    <P>People who use our service may have uploaded your contact information to Facebook. <b>Learn more.</b></P>
+                    <p>By clicking Sign Up, you agree to our <b>Terms, Privacy Policy and Cookies Policy.</b> You may receive SMS notifications from us and can opt out at any time.</p><br>
                     <button class="button">Sign Up</button>
                 </div>
 
